@@ -1,0 +1,34 @@
+import mongoose from 'mongoose'
+
+const commentSchema = new mongoose.Schema({
+  text: { type: String, required: true },
+  rating: Number,
+  createdAt: { type: Date, default: Date.now() },
+  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+})
+
+const movieSchema = new mongoose.Schema({
+  name: { type: String, required: true, unique: true },
+  description: { type: String, required: true, unique: true },
+  cast: { type: Array, required: true },
+  directors: { type: Array, required: true },
+  releaseYear: { type: Number, required: true },
+  runtime: { type: String, required: true },
+  tags: { type: Array, required: true },
+  avgUserRating: { type: Number, required: true },
+  imdbRating: { type: Number, required: true },
+  budget: { type: String, required: true },
+  boxOffice: { type: String, required: true },
+  productionCompany: { type: String, required: true },
+  posterImg: { type: String, required: true },
+  stills: {
+    img1: { type: String, required: true },
+    img2: { type: String, required: true },
+    img3: { type: String, required: true },
+  },
+  youtubeId: { type: String, required: true },
+  comments: [commentSchema],
+  createdAt: { type: Date, default: Date.now() },
+})
+
+export default mongoose.model('Movie', movieSchema)
