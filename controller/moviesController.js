@@ -5,4 +5,10 @@ const getAll = async (req, res) => {
   return res.status(200).json(allMovies)
 }
 
-export default { getAll }
+const getSingle = async (req, res) => {
+  const { movieId } = req.params
+  const singleMovie = await MovieModel.findById(movieId)
+  return res.status(200).json(singleMovie)
+}
+
+export default { getAll, getSingle }
