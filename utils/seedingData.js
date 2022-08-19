@@ -34,7 +34,7 @@ const movies = [
     boxOffice: '$468.1 million',
     productionCompany: ['Warner Bros'],
     posterImg: 'https://m.media-amazon.com/images/I/8118cL0uL2L._AC_SY741_.jpg',
-    still: {
+    stills: {
       img1: 'https://www.shockya.com/news/wp-content/uploads/Lego-Movie-21.jpg',
       img2: 'https://www.shockya.com/news/wp-content/uploads/Lego-Movie-11.jpg',
       img3: 'https://www.shockya.com/news/wp-content/uploads/Lego-Movie-13.jpg',
@@ -56,7 +56,7 @@ const movies = [
     boxOffice: '49 million USD',
     productionCompany: ['Tokyo Movie Shinsha'],
     posterImg: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/AKIRA_%281988_poster%29.jpg/220px-AKIRA_%281988_poster%29.jpg',
-    still: { 
+    stills: { 
       img1: 'https://film-grab.com/wp-content/uploads/photo-gallery/Akira_006.jpg?bwg=1569515759',
       img2: 'https://film-grab.com/wp-content/uploads/photo-gallery/Akira_046.jpg?bwg=1569515756',
       img3: 'https://film-grab.com/wp-content/uploads/photo-gallery/Akira_043.jpg?bwg=1569515756',
@@ -77,7 +77,7 @@ const movies = [
     boxOffice: '631 million USD',
     productionCompany: ['Pixar Animations Studies', 'Walt Disney Pictures'],
     posterImg: 'https://3.bp.blogspot.com/-6pm0yLcFDqs/T-mjxClPnHI/AAAAAAAAHts/nonymvXfX6o/s1600/The+Incredibles+%282004%29+1.jpg',
-    still: {
+    stills: {
       img1: 'https://static.wikia.nocookie.net/disney/images/4/47/Incredibles-disneyscreencaps.com-754.jpg/revision/latest/scale-to-width-down/1000?cb=20160201183855',
       img2: 'https://static.wikia.nocookie.net/disney/images/4/49/Incredibles-disneyscreencaps.com-11411.jpg/revision/latest/scale-to-width-down/1000?cb=20160204130724',
       img3: 'https://static.wikia.nocookie.net/disney/images/e/ef/Incredibles-disneyscreencaps.com-11903.jpg/revision/latest/scale-to-width-down/1000?cb=20150410133542',
@@ -99,7 +99,7 @@ const movies = [
     boxOffice: '521 million USD',
     productionCompany: ['Pixar Animation Studios', 'FortyFour Studios', 'Walt Disney Pictures'],
     posterImg: 'https://static.wikia.nocookie.net/disney/images/f/f2/Walleposter.jpg/revision/latest/scale-to-width-down/1000?cb=20150214194124',
-    still: {
+    stills: {
       img1: 'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1470764072845-47E0I36XDWT09S5AIN75/Walle11.jpg',
       img2: 'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1470764122740-BZ0LLAHWICB1DU74N9RR/Eve12.jpg?format=1500w',
       img3: 'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1470765942248-4QVAI3OTMZLPDO2KDXZ3/Humans10.jpg?format=1500w',
@@ -121,7 +121,7 @@ const movies = [
     boxOffice: '563,130 USD',
     productionCompany: ['Rex Entertainment', 'Kotobuki Seihan Printing', 'Asahi Broadcasting Corporation (ABC)'],
     posterImg: 'https://media-cache.cinematerial.com/p/500x/s1stmj3g/perfect-blue-movie-poster.jpg?v=1456615284',
-    still: {
+    stills: {
       img1: 'https://film-grab.com/wp-content/uploads/photo-gallery/Perfect_Blue_002.jpg?bwg=1569600824',
       img2: 'https://film-grab.com/wp-content/uploads/photo-gallery/Perfect_Blue_041.jpg?bwg=1569600821',
       img3: 'https://film-grab.com/wp-content/uploads/photo-gallery/Perfect_Blue_059.jpg?bwg=1569600821',
@@ -142,7 +142,7 @@ const movies = [
     boxOffice: '516,962 USD',
     productionCompany: ['Studio Ghibli', 'Shinchosha Company'],
     posterImg: 'https://static.wikia.nocookie.net/studio-ghibli/images/6/6d/Grave_of_the_Fireflies_poster.jpg/revision/latest?cb=20220126173445',
-    still: {
+    stills: {
       img1: 'https://cdni.fancaps.net/file/fancaps-movieimages/2295865.jpg',
       img2: 'https://cdni.fancaps.net/file/fancaps-movieimages/2295911.jpg',
       img3: 'https://cdni.fancaps.net/file/fancaps-movieimages/2296193.jpg',
@@ -164,7 +164,7 @@ const movies = [
     boxOffice: '8.8 million USD',
     productionCompany: ['Production companies', 'NibarikiTokuma', 'ShotenHakuhodo'],
     posterImg: 'https://ae01.alicdn.com/kf/HTB1oGCIdwaH3KVjSZFjq6AFWpXaA/Nausicaa-Valley-of-the-Wind-Art-Silk-Poster-Print-30x45cm-50x75cm-Movie-Pictures-Living-Room-Decor.jpg',
-    still: {
+    stills: {
       img1: 'https://film-grab.com/2020/03/24/nausicaa-of-the-valley-of-the-wind/#bwg2197/137160',
       img2: 'https://film-grab.com/2020/03/24/nausicaa-of-the-valley-of-the-wind/#bwg2197/137143',
       img3: 'https://film-grab.com/wp-content/uploads/photo-gallery/Nausica_065.jpg?bwg=1569499346',
@@ -185,7 +185,7 @@ const movies = [
     boxOffice: '918,738 USD',
     productionCompany: ['KôdanshaBandai', 'Visual Company', 'Manga Entertainment'],
     posterImg: 'https://www.scifi-movies.com/images/contenu/data/0000986/affiche-ghost-in-the-shell-1995-3.jpg',
-    still: {
+    stills: {
       img1: 'https://cdni.fancaps.net/file/fancaps-movieimages/2506035.jpg',
       img2: 'https://cdni.fancaps.net/file/fancaps-movieimages/2506105.jpg',
       img3: 'https://cdni.fancaps.net/file/fancaps-movieimages/2506429.jpg',
@@ -206,7 +206,7 @@ const movies = [
     boxOffice: '46 million USD',
     productionCompany: ['Twentieth Century Fox', 'Indian Paintbrush', 'New Regency Productions'],
     posterImg: 'https://lumiere-a.akamaihd.net/v1/images/image_3cdae9ca.jpeg',
-    still: {
+    stills: {
       img1: 'https://film-grab.com/2013/04/29/fantastic-mr-fox/#bwg841/51846',
       img2: 'https://film-grab.com/2013/04/29/fantastic-mr-fox/#bwg841/51813',
       img3: 'https://film-grab.com/2013/04/29/fantastic-mr-fox/#bwg841/51830',
@@ -228,7 +228,7 @@ const movies = [
     boxOffice: '170 million USD',
     productionCompany: ['DENTSU Music And Entertainment', 'Nibariki', 'Nippon Television Network (NTV)'],
     posterImg: 'https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Princess_Mononoke.jpg/revision/latest/scale-to-width-down/1000?cb=20220409212252',
-    still: {
+    stills: {
       img1: 'https://film-grab.com/2020/04/20/princess-mononoke/#bwg2305/143290',
       img2: 'https://film-grab.com/2020/04/20/princess-mononoke/#bwg2305/143270',
       img3: 'https://film-grab.com/wp-content/uploads/photo-gallery/Princess_Mononoke_055.jpg?bwg=1569601131',
@@ -249,7 +249,7 @@ const movies = [
     boxOffice: '1 billion USD',
     productionCompany: ['Walt Disney Pictures'],
     posterImg: 'https://s.movieinsider.com/images/p/600//278681_m1449804366.jpg',
-    still: {
+    stills: {
       img1: 'https://s.movieinsider.com/images/p/274366_m1448424117.jpg',
       img2: 'https://images.fandango.com/r1.0.1039/ImageRenderer/1040/650/redesign/areas/movie/moviesubpages/img/noimage_900x900.jpg/183935/images/masterrepository/fandango/183935/zootopia-ps-11.jpg',
       img3: 'https://s.movieinsider.com/images/p/274368_m1448424186.jpg',
@@ -271,10 +271,10 @@ const movies = [
     boxOffice: '946,590 million USD',
     productionCompany: ['Madhouse', 'Sony Pictures Entertainment'],
     posterImg: 'https://m.media-amazon.com/images/M/MV5BNDI4MGEwZDAtZDg0Yy00MjFhLTg1MjctODdmZTMyNTUyNDI3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg',
-    still: {
+    stills: {
       img1: 'https://screenmusings.org/movie/blu-ray/Paprika/images/Paprika-134.jpg',
       img2: 'https://screenmusings.org/movie/blu-ray/Paprika/images/Paprika-011.jpg',
-      img3: '',
+      img3: 'https://screenmusings.org/movie/blu-ray/Paprika/images/Paprika-002.jpg',
     },
     youtubeId: 'PIUqozzyW2k',
     officialSite: 'https://www.sonypictures.com/movies/paprika',
@@ -293,7 +293,7 @@ const movies = [
     boxOffice: '11 million USD',
     productionCompany: ['Bridgit Folman Film Gang', 'Les Films d\'Ici', 'Razor Film Produktion GmbH'],
     posterImg: 'https://cdn.posteritati.com/posters/000/000/027/594/waltz-with-bashir-md-web.jpg',
-    still: {
+    stills: {
       img1: 'https://images.fandango.com/ImageRenderer/820/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/118670/waltzwithbashir-mv-11.jpg',
       img2: 'https://images.fandango.com/ImageRenderer/820/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/118670/waltzwithbashir-mv-3.jpg',
       img3: 'https://images.fandango.com/ImageRenderer/820/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/118670/waltzwithbashir-mv-7.jpg',
@@ -315,7 +315,7 @@ const movies = [
     boxOffice: '6.1 million USD',
     productionCompany: ['Tokuma Shoten', 'Studio Ghibli'],
     posterImg: 'https://m.media-amazon.com/images/M/MV5BNDFhZmY2NTgtMzljYy00MTlhLTgyMjItNTEwZWJkYThhYzkyXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg',
-    still: {
+    stills: {
       img1: 'https://film-grab.com/wp-content/uploads/photo-gallery/Castle_in_the_Sky_002.jpg?bwg=1569400980',
       img2: 'https://film-grab.com/wp-content/uploads/photo-gallery/Castle_in_the_Sky_041.jpg?bwg=1569400977',
       img3: 'https://film-grab.com/wp-content/uploads/photo-gallery/Castle_in_the_Sky_065.jpg?bwg=1569400977',
@@ -324,7 +324,7 @@ const movies = [
   },
   {
     name: 'The Iron Giant',
-    description: '',
+    description: 'A young boy befriends a giant robot from outer space that a paranoid government agent wants to destroy.',
     cast: ['Eli Marienthal', 'Harry Connick Jr.', 'Jennifer Aniston'],
     directors: ['Brad Bird'],
     releaseYear: 1999,
@@ -336,7 +336,7 @@ const movies = [
     boxOffice: '23 million USD',
     productionCompany: ['Warner Bros'],
     posterImg: 'https://m.media-amazon.com/images/M/MV5BMTk3MDc0MDE3MV5BMl5BanBnXkFtZTYwMTQ1NDg4._V1_.jpg',
-    still: {
+    stills: {
       img1: 'https://iv1.lisimg.com/image/7080369/708full-the-iron-giant-screenshot.jpg',
       img2: 'https://iv1.lisimg.com/image/6002793/650full-the-iron-giant-screenshot.jpg',
       img3: 'https://ilarge.lisimg.com/image/2114020/780full-the-iron-giant-screenshot.jpg',
@@ -358,7 +358,7 @@ const movies = [
     boxOffice: '735 million USD',
     productionCompany: ['Pixar Animation Studios', 'Walt Disney Pictures'],
     posterImg: 'https://m.media-amazon.com/images/M/MV5BMTk3NDE2NzI4NF5BMl5BanBnXkFtZTgwNzE1MzEyMTE@._V1_.jpg',
-    still: {
+    stills: {
       img1: 'https://i0.wp.com/caps.pictures/200/9-up/full/up-disneyscreencaps.com-96.jpg',
       img2: 'https://i0.wp.com/caps.pictures/200/9-up/full/up-disneyscreencaps.com-975.jpg',
       img3: 'https://i0.wp.com/caps.pictures/200/9-up/full/up-disneyscreencaps.com-3421.jpg',
@@ -380,7 +380,7 @@ const movies = [
     boxOffice: '1.06 billion USD',
     productionCompany: ['Walt Disney Pictures', 'Pixar Animation Studios'],
     posterImg: 'https://m.media-amazon.com/images/M/MV5BNWM2YTFkODItNTAyZC00ZGYwLTkwYmMtMDZlODc2MTViYjI4XkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_.jpg',
-    still: {
+    stills: {
       img1: 'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1470766455887-DFPTVNOXSNWXF9L14WNR/Woody6.jpg?format=1500w',
       img2: 'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1469576277928-TGALSX56DEX1JBFNAF3G/Andy_08.jpg?format=1500w',
       img3: 'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1469576484631-BCHY0VAMO88LMVBCV057/Landfill_15.jpg?format=1500w',
@@ -402,7 +402,7 @@ const movies = [
     boxOffice: '623 million USD',
     productionCompany: ['Walt Disney Pictures', 'Pixar Animation Studios'],
     posterImg: 'https://m.media-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_.jpg',
-    still: {
+    stills: {
       img1: 'https://mvcdn.fancaps.net/145952.jpg',
       img2: 'https://mvcdn.fancaps.net/146443.jpg',
       img3: 'https://mvcdn.fancaps.net/146627.jpg',
@@ -424,7 +424,7 @@ const movies = [
     boxOffice: '245 million USD',
     productionCompany: ['Paramount Pictures', 'Nickelodeon Movies', 'Blind Wink Productions'],
     posterImg: 'https://m.media-amazon.com/images/M/MV5BMTc4NjEyODE1OV5BMl5BanBnXkFtZTcwMjYzNTkxNA@@._V1_.jpg',
-    still: {
+    stills: {
       img1: 'https://film-grab.com/wp-content/uploads/photo-gallery/Rango_054.jpg?bwg=1602241231',
       img2: 'https://film-grab.com/wp-content/uploads/photo-gallery/Rango_036.jpg?bwg=1602241230',
       img3: 'https://film-grab.com/wp-content/uploads/photo-gallery/Rango_049.jpg?bwg=1602241230',
