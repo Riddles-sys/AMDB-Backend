@@ -19,7 +19,7 @@ const movieSchema = new mongoose.Schema({
   imdbRating: { type: Number, required: true },
   budget: { type: String, required: true },
   boxOffice: { type: String, required: true },
-  productionCompany: { type: String, required: true },
+  productionCompany: { type: Array, required: true },
   posterImg: { type: String, required: true },
   stills: {
     img1: { type: String, required: true },
@@ -27,6 +27,7 @@ const movieSchema = new mongoose.Schema({
     img3: { type: String, required: true },
   },
   youtubeId: { type: String, required: true },
+  officialSite: { type: String },
   comments: [commentSchema],
   createdAt: { type: Date, default: Date.now() },
 })
