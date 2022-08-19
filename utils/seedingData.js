@@ -98,7 +98,7 @@ const movies = [
     budget: '180 million USD',
     boxOffice: '521 million USD',
     productionCompany: ['Pixar Animation Studios', 'FortyFour Studios', 'Walt Disney Pictures'],
-    posterImg: 'https://static.wikia.nocookie.net/disney/images/f/f2/Walleposter.jpg/revision/latest/scale-to-width-down/1000?cb=20150214194124',
+    posterImg: 'https://static.wikia.nocookie.net/disney/images/f/f2/Walleposter.jpg',
     stills: {
       img1: 'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1470764072845-47E0I36XDWT09S5AIN75/Walle11.jpg',
       img2: 'https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1470764122740-BZ0LLAHWICB1DU74N9RR/Eve12.jpg?format=1500w',
@@ -141,7 +141,7 @@ const movies = [
     budget: '3.7 million USD',
     boxOffice: '516,962 USD',
     productionCompany: ['Studio Ghibli', 'Shinchosha Company'],
-    posterImg: 'https://static.wikia.nocookie.net/studio-ghibli/images/6/6d/Grave_of_the_Fireflies_poster.jpg/revision/latest?cb=20220126173445',
+    posterImg: 'https://static.wikia.nocookie.net/studio-ghibli/images/6/6d/Grave_of_the_Fireflies_poster.jpg',
     stills: {
       img1: 'https://cdni.fancaps.net/file/fancaps-movieimages/2295865.jpg',
       img2: 'https://cdni.fancaps.net/file/fancaps-movieimages/2295911.jpg',
@@ -227,7 +227,7 @@ const movies = [
     budget: '¥2,400,000,000',
     boxOffice: '170 million USD',
     productionCompany: ['DENTSU Music And Entertainment', 'Nibariki', 'Nippon Television Network (NTV)'],
-    posterImg: 'https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Princess_Mononoke.jpg/revision/latest/scale-to-width-down/1000?cb=20220409212252',
+    posterImg: 'https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Princess_Mononoke.jpg',
     stills: {
       img1: 'https://film-grab.com/2020/04/20/princess-mononoke/#bwg2305/143290',
       img2: 'https://film-grab.com/2020/04/20/princess-mononoke/#bwg2305/143270',
