@@ -6,7 +6,7 @@ const connectToDb = async () => {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
-  console.log('DB is connected: ', CONSTS.MONGO_DB_CONNECTION)
+  // console.log('DB is connected: ', CONSTS.MONGO_DB_CONNECTION)
   return mongoose.connect(CONSTS.MONGO_DB_CONNECTION, opts)
 }
 
