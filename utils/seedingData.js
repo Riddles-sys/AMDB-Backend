@@ -165,7 +165,7 @@ const movies = [
     budget: '1 million USD',
     boxOffice: '8.8 million USD',
     productionCompany: ['Production companies', 'NibarikiTokuma', 'ShotenHakuhodo'],
-    posterImg: 'https://ae01.alicdn.com/kf/HTB1oGCIdwaH3KVjSZFjq6AFWpXaA/Nausicaa-Valley-of-the-Wind-Art-Silk-Poster-Print-30x45cm-50x75cm-Movie-Pictures-Living-Room-Decor.jpg',
+    posterImg: 'https://m.media-amazon.com/images/M/MV5BZTI3NmJmYTQtNDg4NS00M2VlLTgzZDAtZWIwZDcyOWY5YzIzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg',
     stills: {
       img1: 'https://film-grab.com/2020/03/24/nausicaa-of-the-valley-of-the-wind/#bwg2197/137160',
       img2: 'https://film-grab.com/2020/03/24/nausicaa-of-the-valley-of-the-wind/#bwg2197/137143',

@@ -1,4 +1,4 @@
-const errorHandler = (error, req, res) => {
+const errorHandler = (error, req, res, next) => {
   console.log(`Server side error: ${error}`)
   console.log(`Name of the error: ${error.name}`)
   if (error.name === 'CastError') {

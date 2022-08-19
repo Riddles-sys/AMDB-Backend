@@ -10,12 +10,13 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
-app.use(logger)
+// app.use(logger)
 app.use(router)
 app.use(errorHandler)
 
 // ! CATCH
 app.use((req, res, next) => {
+  console.log('request cant be met', req.url, req.method)
   return res.status(404).send('404 - Required endpoint not found.')
 })
 

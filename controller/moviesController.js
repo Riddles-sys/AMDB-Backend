@@ -9,15 +9,15 @@ const getAll = async (req, res) => {
 
 // ! GET INDIVIDUAL MOVIE
 const getIndividual = async (req, res, next) => {
-  const { id } = req.params
+  const { movieId } = req.params
 
   try {
-    const foundMovie = await MovieModel.findById(id)
+    const foundMovie = await MovieModel.findById(movieId)
 
     if (!foundMovie) {
       return res
         .status(404)
-        .json({ message: `Movie with id ${id} could not be found.` })
+        .json({ message: `Movie with id ${movieId} could not be found.` })
     }
 
     return res.status(200).json(foundMovie)
