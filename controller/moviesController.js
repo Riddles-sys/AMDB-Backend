@@ -6,6 +6,7 @@ const getAll = async (req, res) => {
   return res.status(200).json(allMovies)
 }
 
+
 // ! GET INDIVIDUAL MOVIE
 const getIndividual = async (req, res, next) => {
   const { id } = req.params
