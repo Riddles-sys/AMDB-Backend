@@ -1,17 +1,5 @@
 import MovieModel from '../models/movies.js'
 
-// ! ENDPOINTS
-// import commentsController from './controller/commentsController.js'
-// // ! COMMENT ROUTES
-// // create comment
-// router.route('/comment/:movieId').post(auth, commentsController.create)
-
-// router.route('/:movieId/:commentId')
-//   // update comment
-//   .put(auth, commentsController.update)
-//   // remove comment
-//   .delete(auth, commentsController.remove)
-
 // * CREATE COMMENT ------------- 
 
 const create = async (req, res, next) => {
