@@ -1,3 +1,32 @@
+import bcrypt from 'bcrypt'
+
+// ! Hashing the password
+const hashPassword = async (password) => {
+  const salt = await bcrypt.genSalt(10)
+  const hashedPassword = await bcrypt.hash(password, salt)
+  return hashedPassword
+}
+
+
+// ! Default users
+const users = { 
+  admin: {
+    email: 'admin@admin.com',
+    userName: 'admin',
+    password: await hashPassword('12345'),
+    role: 'admin',
+  },
+  user: {
+    email: 'user@email.com',
+    userName: 'user',
+    password: await hashPassword('12345'),
+    role: 'user',
+    _id: '0B8F639A9B8FEC5181656136',
+  },
+}
+
+
+// ! Default movies
 const movies = [
   {
     name: 'The Lion King',
@@ -250,7 +279,7 @@ const movies = [
     budget: '150 million USD',
     boxOffice: '1 billion USD',
     productionCompany: ['Walt Disney Pictures'],
-    posterImg: 'https://s.movieinsider.com/images/p/600//278681_m1449804366.jpg',
+    posterImg: 'https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_.jpg',
     stills: {
       img1: 'https://s.movieinsider.com/images/p/274366_m1448424117.jpg',
       img2: 'https://images.fandango.com/r1.0.1039/ImageRenderer/1040/650/redesign/areas/movie/moviesubpages/img/noimage_900x900.jpg/183935/images/masterrepository/fandango/183935/zootopia-ps-11.jpg',
@@ -435,4 +464,4 @@ const movies = [
   }
 ]
 
-export default { movies }
+export default { movies, users }
