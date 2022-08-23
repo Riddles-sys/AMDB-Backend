@@ -19,7 +19,7 @@ router.route('/login').post(userController.login)
 
 // ! Comment routes here
 // Create comment on movie
-router.route('/comment/:movieId').post(auth, commentsController.create)
+router.route('/:movieId/comment/').post(auth, commentsController.create)
 
 router.route('/:movieId/:commentId')
   // update comment
