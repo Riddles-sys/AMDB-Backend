@@ -74,7 +74,6 @@ const login = async (req, res, next) => {
 
 // ! GET USER PROFILE
 const getUserProfile = async (req, res, next) => {
-  // const { userId } = req.params
   console.log(req.currentUser.userName)
 
   try {
