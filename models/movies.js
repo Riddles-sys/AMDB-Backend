@@ -5,6 +5,7 @@ const commentSchema = new mongoose.Schema({
   rating: Number,
   createdAt: { type: Date, default: Date.now() },
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  userName: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
 })
 
 const movieSchema = new mongoose.Schema({
