@@ -6,8 +6,8 @@ const create = async (req, res, next) => {
   const { movieId } = req.params
   const { body: newComment } = req
   console.log('newComment -> ', newComment)
-  console.log('req', req)
-  console.log('reqUserName', req.currentUser.userName)
+  console.log('req', req.currentUser)
+  // console.log('reqUserName', req.currentUser.userName)
   try {
     // Find Movie
     const movie = await MovieModel.findById(movieId)
