@@ -2,6 +2,7 @@ import UserModel from '../models/user.js'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import CONSTS from './../consts.js'
+import auth from '../middleware/auth.js'
 
 // currently working on an error - newUser.password is undefined but shouldn't be.
 // ! REGISTER USER
@@ -28,7 +29,6 @@ const register = async (req, res, next) => {
   }
 
   const salt = await bcrypt.genSalt(10)
-  console.log(newUser.password)
   const hashedPassword = await bcrypt.hash(newUser.password, salt)
 
   const createdUser = await UserModel.create({
@@ -55,6 +55,7 @@ const login = async (req, res, next) => {
     }
 
     const payload = {
+      sub: user._id,
       userName: user.userName,
       email: user.email,
     }
@@ -62,11 +63,33 @@ const login = async (req, res, next) => {
       expiresIn: '2 days',
     }
     const token = jwt.sign(payload, CONSTS.JWT_SECRET, opts)
-
-    return res.status(200).json({ token })
+    console.log(`User logged in with id -> ${user._id}`)
+    return res
+      .status(200)
+      .json({ message: `Welcome user with id -> ${user._id}`, token })
   } catch (error) {
     next(error)
   }
 }
 
-export default { register, login }
+// ! GET USER PROFILE
+const getUserProfile = async (req, res, next) => {
+  // const { userId } = req.params
+  console.log(req.currentUser.userName)
+
+  try {
+    const foundUser = await UserModel.findById(req.currentUser._id)
+
+    if (!foundUser) {
+      return res
+        .status(404)
+        .json({ message: `User with id ${userId} could not be found.` })
+    }
+
+    return res.status(200).json(foundUser)
+  } catch (error) {
+    next(error)
+  }
+}
+
+export default { register, login, getUserProfile }

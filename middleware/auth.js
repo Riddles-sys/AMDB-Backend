@@ -4,7 +4,7 @@ import UserModel from '../models/user.js'
 
 const auth = async (req, res, next) => {
   const rawToken = req.headers.authorization
-  console.log('HEADERS', req.headers)
+  // console.log('HEADERS', req.headers)
 
   if (!rawToken) {
     return res
@@ -28,7 +28,7 @@ const auth = async (req, res, next) => {
     }
 
     req.currentUser = authUser
-
+    // console.log(req.currentUser)
     next()
   } catch (error) {
     next(error)
