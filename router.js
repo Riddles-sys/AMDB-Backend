@@ -12,16 +12,19 @@ router.route('/').get((req, res) => res.status(200).send('API Root Running!'))
 router.route('/movies').get(moviesController.getAll)
 router.route('/movies/:movieId').get(moviesController.getIndividual)
 
-
 // ! Auth routes
 router.route('/register').post(userController.register)
 router.route('/login').post(userController.login)
+
+// ! User Profile route
+router.route('/profile').get(auth, userController.getUserProfile)
 
 // ! Comment routes here
 // Create comment on movie
 router.route('/:movieId/comment/').post(auth, commentsController.create)
 
-router.route('/:movieId/:commentId')
+router
+  .route('/:movieId/:commentId')
   // update comment
   .put(auth, commentsController.update)
   // remove comment
