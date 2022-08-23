@@ -33,4 +33,15 @@ const movieSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now() },
 })
 
+movieSchema.virtual('avgRating').get(function () {
+  if (!this.comments.length) return 'Not rated'
+  const sum = this.comments.reduce((acc, comments) => {
+    return acc + comments.rating
+  }, 0)
+  return Number(sum / this.comments.length).toFixed(2)
+})
+
+movieSchema.set('toJSON', { virtual: true })
+
+
 export default mongoose.model('Movie', movieSchema)
