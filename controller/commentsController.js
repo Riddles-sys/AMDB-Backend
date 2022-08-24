@@ -26,6 +26,7 @@ const create = async (req, res, next) => {
     //     .status(404)
     //     .json({ message: `User ${req.currentUser.userName} Already commented on this movie!` })
     // }
+    console.log('new comment ->', newComment)
 
     // push new comment to comments array of the movie and add createdBy
     movie.comments.push({
