@@ -40,7 +40,7 @@ const addToWatchlist = async (req, res, next) => {
     // console.log(foundMovie)
     // console.log('found movie ->', foundMovie)
     // add specified movie to user's watchlist
-    foundUser.likedMovies.push(foundMovie)
+    foundUser.watchlist.push(foundMovie)
     await foundUser.save()
     // console.log(foundUser)
     return res.status(200).json(foundUser)
