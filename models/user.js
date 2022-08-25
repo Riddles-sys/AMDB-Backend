@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { commentSchema } from './movies'
+import { commentSchema } from './movies.js'
 const GENRES = [
   'Action',
   'Adventure',
