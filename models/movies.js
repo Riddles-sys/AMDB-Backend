@@ -7,6 +7,7 @@ export const commentSchema = new mongoose.Schema({
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   userName: { type: String, ref: 'User', required: true },
   movieName: String,
+  moviePoster: String,
 })
 
 const movieSchema = new mongoose.Schema({

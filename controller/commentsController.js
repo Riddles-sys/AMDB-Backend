@@ -21,14 +21,14 @@ const create = async (req, res, next) => {
     }
     // console.log(movie)
 
-    // check if the current user has already commented on this movie
-    const foundComment = movie.comments.find(comment => comment.createdBy.toString() === req.currentUser.id)
-    if (foundComment) {
-      return res
-        .status(404)
-        .json({ message: `User ${req.currentUser.userName} Already commented on this movie!` })
-    }
-    console.log('new comment ->', newComment)
+    // // check if the current user has already commented on this movie
+    // const foundComment = movie.comments.find(comment => comment.createdBy.toString() === req.currentUser.id)
+    // if (foundComment) {
+    //   return res
+    //     .status(404)
+    //     .json({ message: `User ${req.currentUser.userName} Already commented on this movie!` })
+    // }
+    // console.log('new comment ->', newComment)
 
     // push new comment to comments array of the movie and add createdBy
     movie.comments.push({
@@ -43,10 +43,13 @@ const create = async (req, res, next) => {
       createdBy: req.currentUser.id,
       userName: req.currentUser.userName,
       movieName: movie.name,
+      moviePoster: movie.posterImg,
+      // movieCommented: movie,
     })
 
     // save it to movieDB
     await movie.save()
+    await user.save()
     return res.status(200).json({
       message: 'Comment successfully created!',
       createdComment: newComment,
