@@ -33,14 +33,14 @@ const addToWatchlist = async (req, res, next) => {
     if (!foundUser) {
       return res.status(404).json({ message: `User could not be found.` })
     }
-    console.log('user id ->', req.currentUser._id)
+    console.log('movie ->', movieId)
     // console.log(foundUser)
 
     // console.log('movie id ->', movieId)
     // console.log(foundMovie)
     // console.log('found movie ->', foundMovie)
     // add specified movie to user's watchlist
-    foundUser.likedMovies.push(foundMovie)
+    foundUser.watchlist.push(foundMovie)
     await foundUser.save()
     // console.log(foundUser)
     return res.status(200).json(foundUser)
@@ -54,6 +54,29 @@ const addToWatchlist = async (req, res, next) => {
 const removeFromWatchlist = async (req, res, next) => {
   // * req is sent with user indentifyer + movie identifyer
   // * remove the identifyed movie from the indentifyed user watchlist
+  const { movieId } = req.params
+  try {
+    const foundUser = await UserModel.findById(req.currentUser._id)
+    // const foundMovie = await MovieModel.findById(movieId)
+    console.log('watchlist of user ->', req.currentUser._id)
+    console.log('movie to remove ->', movieId)
+    console.log('MOVIE REMOVED')
+    if (!foundUser) {
+      return res.status(404).json({ message: `User could not be found.` })
+    }
+
+    foundUser.watchlist = foundUser.watchlist.filter(
+      (movie) => movie._id.toString() !== movieId
+    )
+
+    await foundUser.save()
+
+    return res
+      .status(200)
+      .send({ message: 'movie has been remove from watchlist' })
+  } catch (error) {
+    next(error)
+  }
 }
 
 export default { getWatchlist, addToWatchlist, removeFromWatchlist }

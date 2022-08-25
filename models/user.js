@@ -9,7 +9,7 @@ const GENRES = [
   'Fantasy',
   'Superhero',
   'Animal',
-  'Anime'
+  'Anime',
 ]
 
 const userSchema = new mongoose.Schema({
@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
   // confirmPassword: { type: String, required: true },
   role: { type: String, enum: ['admin', 'user'], default: 'user' },
   favouriteMovieGenre: { type: String, enum: GENRES },
-  likedMovies: [],
+  watchlist: [],
   createdAt: { type: Date, default: Date.now() },
 })
 
