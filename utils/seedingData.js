@@ -11,12 +11,14 @@ const hashPassword = async (password) => {
 // ! Default users
 const users = { 
   admin: {
+    name: 'Admin',
     email: 'admin@admin.com',
     userName: 'admin',
     password: await hashPassword('12345'),
     role: 'admin',
   },
   user: {
+    name: 'User',
     email: 'user@email.com',
     userName: 'user',
     password: await hashPassword('12345'),
