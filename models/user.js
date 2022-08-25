@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-
+import { commentSchema } from './movies'
 const GENRES = [
   'Action',
   'Adventure',
@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema({
   favouriteMovieGenre: { type: String, enum: GENRES },
   watchlist: [],
   createdAt: { type: Date, default: Date.now() },
+  comments: [commentSchema],
 })
 
 export default mongoose.model('User', userSchema)

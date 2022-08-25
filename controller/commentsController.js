@@ -1,4 +1,5 @@
 import MovieModel from '../models/movies.js'
+import UserModel from '../models/user.js'
 
 // * CREATE COMMENT -------------
 
@@ -11,6 +12,7 @@ const create = async (req, res, next) => {
   try {
     // Find Movie
     const movie = await MovieModel.findById(movieId)
+    const user = await UserModel.findById(req.currentUser.id)
     // console.log(movie)
 
     // check if it exist
@@ -20,12 +22,12 @@ const create = async (req, res, next) => {
     // console.log(movie)
 
     // check if the current user has already commented on this movie
-    // const foundComment = movie.comments.find(comment => comment.createdBy.toString() === req.currentUser.id)
-    // if (foundComment) {
-    //   return res
-    //     .status(404)
-    //     .json({ message: `User ${req.currentUser.userName} Already commented on this movie!` })
-    // }
+    const foundComment = movie.comments.find(comment => comment.createdBy.toString() === req.currentUser.id)
+    if (foundComment) {
+      return res
+        .status(404)
+        .json({ message: `User ${req.currentUser.userName} Already commented on this movie!` })
+    }
     console.log('new comment ->', newComment)
 
     // push new comment to comments array of the movie and add createdBy
@@ -33,6 +35,14 @@ const create = async (req, res, next) => {
       ...newComment,
       createdBy: req.currentUser.id,
       userName: req.currentUser.userName,
+      movieName: movie.name,
+    })
+
+    user.comments.push({
+      ...newComment,
+      createdBy: req.currentUser.id,
+      userName: req.currentUser.userName,
+      movieName: movie.name,
     })
 
     // save it to movieDB
