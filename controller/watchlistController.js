@@ -36,6 +36,11 @@ const addToWatchlist = async (req, res, next) => {
     console.log('movie ->', movieId)
     // console.log(foundUser)
 
+
+    // console.log('movie id ->', movieId)
+    // console.log(foundMovie)
+    // console.log('found movie ->', foundMovie)
+    // add specified movie to user's watchlist
     foundUser.watchlist.push(foundMovie)
     await foundUser.save()
     // console.log(foundUser)

@@ -82,7 +82,9 @@ const getUserProfile = async (req, res, next) => {
     if (!foundUser) {
       return res
         .status(404)
-        .json({ message: `User with id ${userId} could not be found.` })
+        .json({
+          message: `User with id ${req.currentUser._id} could not be found.`,
+        })
     }
 
     return res.status(200).json(foundUser)
