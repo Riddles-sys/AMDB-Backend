@@ -482,7 +482,7 @@ const movies = [
     },
     youtubeId: 'ByXuk9QqQkk',
     officialSite: 'https://www.studioghibli.com.au/spiritedaway/',
-  }
+  },
   {
     name: 'My Neighbour Totoro',
     description: 'When two girls move to the country to be near their ailing mother, they have adventures with the wondrous forest spirits who live nearby.',
