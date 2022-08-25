@@ -5,13 +5,13 @@ import UserModel from '../models/user.js'
 const auth = async (req, res, next) => {
   const rawToken = req.headers.authorization
   // console.log('HEADERS', req.headers)
-
+  // console.log('AUTH IS WORKING')
   if (!rawToken) {
     return res
       .status(401)
       .json({ message: 'Unauthorized - No has been token provided.' })
   }
-
+  console.log('AUTH IS WORKING')
   const token = rawToken.split(' ')[1]
 
   try {

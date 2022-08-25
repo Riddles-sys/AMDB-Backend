@@ -9,7 +9,7 @@ const GENRES = [
   'Fantasy',
   'Superhero',
   'Animal',
-  'Anime'
+  'Anime',
 ]
 
 const userSchema = new mongoose.Schema({
