@@ -12,7 +12,7 @@ const register = async (req, res, next) => {
   if (emailExists) {
     return res
       .status(400)
-      .json({ message: 'User with this email address already exists' })
+      .send({ message: 'User with this email address already exists' })
   }
 
   const userNameExists = await UserModel.findOne({
@@ -21,11 +21,11 @@ const register = async (req, res, next) => {
   if (userNameExists) {
     return res
       .status(400)
-      .json({ message: 'User with this username already exists' })
+      .send({ message: 'User with this username already exists' })
   }
 
   if (newUser.password !== newUser.confirmPassword) {
-    return res.status(400).json({ message: 'Passwords do not match.' })
+    return res.status(400).send({ message: 'Passwords do not match.' })
   }
 
   const salt = await bcrypt.genSalt(10)
@@ -46,12 +46,12 @@ const login = async (req, res, next) => {
     const user = await UserModel.findOne({ userName })
 
     if (!user) {
-      return res.status(400).json({ message: 'Invalid credentials.' })
+      return res.status(400).send({ message: 'Invalid credentials.' })
     }
 
     const passwordsMatch = await bcrypt.compare(password, user.password)
     if (!passwordsMatch) {
-      return res.status(400).json({ message: 'Invalid credentials' })
+      return res.status(400).send({ message: 'Invalid credentials' })
     }
 
     const payload = {
@@ -66,7 +66,7 @@ const login = async (req, res, next) => {
     console.log(`User logged in with id -> ${user._id}`)
     return res
       .status(200)
-      .json({ message: `Welcome user with id -> ${user._id}`, token })
+      .send({ message: `Welcome back ${user.userName}!`, token })
   } catch (error) {
     next(error)
   }

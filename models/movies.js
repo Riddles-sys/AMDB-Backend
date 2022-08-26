@@ -8,6 +8,7 @@ export const commentSchema = new mongoose.Schema({
   userName: { type: String, ref: 'User', required: true },
   movieName: String,
   moviePoster: String,
+  movieID: { type: mongoose.Schema.ObjectId, ref: 'Movie' },
 })
 
 const movieSchema = new mongoose.Schema({
