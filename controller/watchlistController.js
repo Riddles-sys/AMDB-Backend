@@ -31,7 +31,7 @@ const addToWatchlist = async (req, res, next) => {
     const foundMovie = await MovieModel.findById(movieId)
 
     if (!foundUser) {
-      return res.status(404).json({ message: `User could not be found.` })
+      return res.status(404).json({ message: 'User could not be found.' })
     }
     console.log('movie ->', movieId)
     // console.log(foundUser)
@@ -63,7 +63,7 @@ const removeFromWatchlist = async (req, res, next) => {
     console.log('movie to remove ->', movieId)
     console.log('MOVIE REMOVED')
     if (!foundUser) {
-      return res.status(404).json({ message: `User could not be found.` })
+      return res.status(404).json({ message: 'User could not be found.' })
     }
 
     foundUser.watchlist = foundUser.watchlist.filter(
